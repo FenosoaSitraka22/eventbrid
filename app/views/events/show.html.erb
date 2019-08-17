@@ -1,0 +1,8 @@
+<%e =Event.find(params[:id])%>
+<h1>Titre: <%=e.title.upcase%></h1>
+<h3>Description: <%=e.description%></h3>
+<h3>Administrator: <%=e.admin.email%></h3>
+<h3>date de debut: <%=e.start_date%></h3>
+<h3>date de fin: <%=e.start_date %></h3>
+<h3>Lieu : <%=e.location%></h3>
+<h3>Price : <%=e.price %>$</h3> 

@@ -1,0 +1,21 @@
+<%=form_tag("/users/#{current_user.id}", method: "put") do %>
+
+  <div class="row">
+    <div class="col">
+    	First name
+      <input type="text" class="form-control" name="fn" value = <%=current_user.first_name%>>
+    </div>
+    <div class="col">
+    	 Last name
+      <input type="text" class="form-control" name="ln" value = <%=current_user.last_name%>>
+    </div>
+  </div>
+
+   <div class="col">
+   	 Description
+      <input type="text" class="form-control" name="description" value = <%=current_user.description%>>
+    </div>
+   </div>
+ <button   class="btn btn-primary" >Edit</button>
+ <%end%>
+

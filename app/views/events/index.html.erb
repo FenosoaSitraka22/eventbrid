@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2><%= link_to "Create Event", new_event_path%></h2>
+ <div class="grid-container">
+		<% Event.all.each  do |e| %>
+			<div class=" bg-transparent border-success" style="max-width: 28rem;">
+			  <div class="card-header"><%= link_to "#{e.title}", event_path(e.id) %></div>
+			  <div class="card-body">
+			 
+			     
+					<h5><%=e.description%></h5>
+					
+					<h5><%=e.location%></h5>
+					
+					<h5><%=e.start_date%></h5>
+			  </div>
+			</div>
+		<%end%>
+ </div> 
+
+  
+
+
+</body>
+</html>
